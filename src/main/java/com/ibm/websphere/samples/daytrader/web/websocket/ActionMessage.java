@@ -17,8 +17,8 @@ package com.ibm.websphere.samples.daytrader.web.websocket;
 
 import java.io.StringReader;
 
-import javax.json.Json;
-import javax.json.stream.JsonParser;
+import jakarta.json.Json;
+import jakarta.json.stream.JsonParser;
 
 import com.ibm.websphere.samples.daytrader.util.Log;
 

@@ -1,0 +1,25 @@
+Created-By: 11.0.7 (Eclipse OpenJ9)
+IBM-AppliesTo: io.openliberty;productVersion="21.0.0.2"
+IBM-Feature-Version: 2
+IBM-Install-Policy: when-satisfied
+IBM-InstallTo: core
+IBM-License-Agreement: wlp/lafiles/LA
+IBM-ProductID: io.openliberty
+IBM-Provision-Capability: osgi.identity; filter:="(&(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.samlWeb-2.0))",
+ osgi.identity; filter:="(&(type=osgi.subsystem.feature)(|(osgi.identity=com.ibm.websphere.appserver.servlet-3.0)(osgi.identity=com.ibm.websphere.appserver.servlet-3.1)(osgi.identity=com.ibm.websphere.appserver.servlet-4.0)))"
+Subsystem-Content: com.ibm.websphere.appserver.servlet-3.0; ibm.tolerates:="3.1,4.0"; type="osgi.subsystem.feature",
+ com.ibm.websphere.appserver.appSecurity-2.0; ibm.tolerates:="3.0"; type="osgi.subsystem.feature",
+ com.ibm.ws.org.opensaml.opensaml.2.6.1; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.opensaml.openws.1.5.6; version="[1.0.0,1.0.200)",
+ com.ibm.ws.security.saml.sso.2.0; version="[1.0.0,1.0.200)",
+ com.ibm.ws.security.saml.wab.2.0; version="[1.0.0,1.0.200)",
+ com.ibm.ws.security.common; version="[1.0.0,1.0.200)"
+Subsystem-Description: %description
+Subsystem-License: https://www.eclipse.org/legal/epl-v10.html
+Subsystem-Localization: OSGI-INF/l10n/io.openliberty.samlWeb2.0.javaee
+Subsystem-ManifestVersion: 1
+Subsystem-SymbolicName: io.openliberty.samlWeb2.0.javaee; visibility:=private; singleton:=false
+Subsystem-Type: osgi.subsystem.feature
+Subsystem-Vendor: IBM Corp.
+Subsystem-Version: 1.0.0
+Tool: Bnd-4.3.0.201909301554

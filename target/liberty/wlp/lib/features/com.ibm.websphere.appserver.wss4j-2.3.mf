@@ -1,0 +1,32 @@
+Created-By: 11.0.7 (Eclipse OpenJ9)
+IBM-AppliesTo: io.openliberty;productVersion="21.0.0.2"
+IBM-Feature-Version: 2
+IBM-InstallTo: core
+IBM-License-Agreement: wlp/lafiles/LA
+IBM-ProductID: io.openliberty
+Subsystem-Content: com.ibm.ws.org.apache.santuario.xmlsec.2.2.0; version="[1.0.0,1.0.200)",
+ com.ibm.ws.com.google.guava; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.apache.wss4j.bindings.2.3.0; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.apache.wss4j.policy.2.3.0; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.apache.wss4j.ws.security.common.2.3.0; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.apache.wss4j.ws.security.dom.2.3.0; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.apache.wss4j.ws.security.policy.stax.2.3.0; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.apache.wss4j.ws.security.stax.2.3.0; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.apache.wss4j.ws.security.web.2.3.0; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.cryptacular.cryptacular.1.2.4; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.ehcache.ehcache.107.3.8.1; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.jasypt.jasypt.1.9.3; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.apache.neethi.3.1.1; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.joda.time.2.9.9; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.opensaml.opensaml.core.3.4.5; version="[1.0.0,1.0.200)",
+ com.ibm.ws.net.shibboleth.utilities.java.support.7.5.1; version="[1.0.0,1.0.200)"
+Subsystem-Description: %description
+Subsystem-License: https://www.eclipse.org/legal/epl-v10.html
+Subsystem-Localization: OSGI-INF/l10n/com.ibm.websphere.appserver.wss4j-2.3
+Subsystem-ManifestVersion: 1
+Subsystem-SymbolicName: com.ibm.websphere.appserver.wss4j-2.3; visibility:=private; singleton:=true
+Subsystem-Type: osgi.subsystem.feature
+Subsystem-Vendor: IBM Corp.
+Subsystem-Version: 1.0.0
+Tool: Bnd-4.3.0.201909301554
+WLP-DisableAllFeatures-OnConflict: false

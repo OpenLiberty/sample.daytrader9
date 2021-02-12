@@ -22,15 +22,15 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
-import javax.enterprise.context.SessionScoped;
-import javax.enterprise.inject.Any;
-import javax.enterprise.inject.Instance;
-import javax.inject.Inject;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import jakarta.enterprise.context.SessionScoped;
+import jakarta.enterprise.inject.Any;
+import jakarta.enterprise.inject.Instance;
+import jakarta.inject.Inject;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import com.ibm.websphere.samples.daytrader.interfaces.Trace;
 import com.ibm.websphere.samples.daytrader.interfaces.TradeServices;
@@ -84,14 +84,14 @@ public class TradeServletAction implements Serializable {
    * @param results
    *            A short description of the results/success of this web request
    *            provided on the web page
-   * @exception javax.servlet.ServletException
+   * @exception jakarta.servlet.ServletException
    *                If a servlet specific exception is encountered
-   * @exception javax.io.IOException
+   * @exception jakarta.io.IOException
    *                If an exception occurs while writing results back to the
    *                user
    *
    */
-  void doAccount(ServletContext ctx, HttpServletRequest req, HttpServletResponse resp, String userID, String results) throws javax.servlet.ServletException,
+  void doAccount(ServletContext ctx, HttpServletRequest req, HttpServletResponse resp, String userID, String results) throws jakarta.servlet.ServletException,
   java.io.IOException {
     try {
 
@@ -144,15 +144,15 @@ public class TradeServletAction implements Serializable {
    *            the HttpRequest object
    * @param resp
    *            the HttpResponse object
-   * @exception javax.servlet.ServletException
+   * @exception jakarta.servlet.ServletException
    *                If a servlet specific exception is encountered
-   * @exception javax.io.IOException
+   * @exception jakarta.io.IOException
    *                If an exception occurs while writing results back to the
    *                user
    *
    */
   void doAccountUpdate(ServletContext ctx, HttpServletRequest req, HttpServletResponse resp, String userID, String password, String cpassword,
-      String fullName, String address, String creditcard, String email) throws javax.servlet.ServletException, java.io.IOException {
+      String fullName, String address, String creditcard, String email) throws jakarta.servlet.ServletException, java.io.IOException {
     String results = "";
 
     // First verify input data
@@ -200,9 +200,9 @@ public class TradeServletAction implements Serializable {
    *            the HttpRequest object
    * @param resp
    *            the HttpResponse object
-   * @exception javax.servlet.ServletException
+   * @exception jakarta.servlet.ServletException
    *                If a servlet specific exception is encountered
-   * @exception javax.io.IOException
+   * @exception jakarta.io.IOException
    *                If an exception occurs while writing results back to the
    *                user
    *
@@ -246,14 +246,14 @@ public class TradeServletAction implements Serializable {
    * @param results
    *            A short description of the results/success of this web request
    *            provided on the web page
-   * @exception javax.servlet.ServletException
+   * @exception jakarta.servlet.ServletException
    *                If a servlet specific exception is encountered
-   * @exception javax.io.IOException
+   * @exception jakarta.io.IOException
    *                If an exception occurs while writing results back to the
    *                user
    *
    */
-  void doHome(ServletContext ctx, HttpServletRequest req, HttpServletResponse resp, String userID, String results) throws javax.servlet.ServletException,
+  void doHome(ServletContext ctx, HttpServletRequest req, HttpServletResponse resp, String userID, String results) throws jakarta.servlet.ServletException,
   java.io.IOException {
 
     try {
@@ -281,7 +281,7 @@ public class TradeServletAction implements Serializable {
       // exception but would invalidate a automation run
       Log.error("TradeServletAction.doHome(...)" + "illegal argument, information should be in exception string"
           + "treating this as a user error and forwarding on to a new page", e);
-    } catch (javax.ejb.FinderException e) {
+    } catch (jakarta.ejb.FinderException e) {
       // this is a user error so I will
       // forward them to another page rather than throw a 500
       req.setAttribute("results", results + "\nCould not find account for + " + userID);
@@ -315,14 +315,14 @@ public class TradeServletAction implements Serializable {
    * @param results
    *            A short description of the results/success of this web request
    *            provided on the web page
-   * @exception javax.servlet.ServletException
+   * @exception jakarta.servlet.ServletException
    *                If a servlet specific exception is encountered
-   * @exception javax.io.IOException
+   * @exception jakarta.io.IOException
    *                If an exception occurs while writing results back to the
    *                user
    *
    */
-  void doLogin(ServletContext ctx, HttpServletRequest req, HttpServletResponse resp, String userID, String passwd) throws javax.servlet.ServletException,
+  void doLogin(ServletContext ctx, HttpServletRequest req, HttpServletResponse resp, String userID, String passwd) throws jakarta.servlet.ServletException,
   java.io.IOException {
 
     String results = "";
@@ -379,9 +379,9 @@ public class TradeServletAction implements Serializable {
    * @param results
    *            A short description of the results/success of this web request
    *            provided on the web page
-   * @exception javax.servlet.ServletException
+   * @exception jakarta.servlet.ServletException
    *                If a servlet specific exception is encountered
-   * @exception javax.io.IOException
+   * @exception jakarta.io.IOException
    *                If an exception occurs while writing results back to the
    *                user
    *
@@ -442,9 +442,9 @@ public class TradeServletAction implements Serializable {
    * @param results
    *            A short description of the results/success of this web request
    *            provided on the web page
-   * @exception javax.servlet.ServletException
+   * @exception jakarta.servlet.ServletException
    *                If a servlet specific exception is encountered
-   * @exception javax.io.IOException
+   * @exception jakarta.io.IOException
    *                If an exception occurs while writing results back to the
    *                user
    *
@@ -500,9 +500,9 @@ public class TradeServletAction implements Serializable {
    *            the HttpRequest object
    * @param resp
    *            the HttpResponse object
-   * @exception javax.servlet.ServletException
+   * @exception jakarta.servlet.ServletException
    *                If a servlet specific exception is encountered
-   * @exception javax.io.IOException
+   * @exception jakarta.io.IOException
    *                If an exception occurs while writing results back to the
    *                user
    *
@@ -550,9 +550,9 @@ public class TradeServletAction implements Serializable {
    *            the HttpRequest object
    * @param resp
    *            the HttpResponse object
-   * @exception javax.servlet.ServletException
+   * @exception jakarta.servlet.ServletException
    *                If a servlet specific exception is encountered
-   * @exception javax.io.IOException
+   * @exception jakarta.io.IOException
    *                If an exception occurs while writing results back to the
    *                user
    *
@@ -607,9 +607,9 @@ public class TradeServletAction implements Serializable {
    *            the HttpRequest object
    * @param resp
    *            the HttpResponse object
-   * @exception javax.servlet.ServletException
+   * @exception jakarta.servlet.ServletException
    *                If a servlet specific exception is encountered
-   * @exception javax.io.IOException
+   * @exception jakarta.io.IOException
    *                If an exception occurs while writing results back to the
    *                user
    *

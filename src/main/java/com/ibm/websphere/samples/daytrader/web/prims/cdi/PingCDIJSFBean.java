@@ -17,8 +17,8 @@ package com.ibm.websphere.samples.daytrader.web.prims.cdi;
 
 import java.io.Serializable;
 
-import javax.enterprise.context.SessionScoped;
-import javax.inject.Named;
+import jakarta.enterprise.context.SessionScoped;
+import jakarta.inject.Named;
 
 @Named
 @SessionScoped

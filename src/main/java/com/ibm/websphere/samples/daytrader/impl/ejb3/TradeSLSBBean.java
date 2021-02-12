@@ -23,31 +23,31 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.Future;
 
-import javax.annotation.Resource;
-import javax.ejb.EJB;
-import javax.ejb.EJBException;
-import javax.ejb.SessionContext;
-import javax.ejb.Stateless;
-import javax.ejb.TransactionAttribute;
-import javax.ejb.TransactionAttributeType;
-import javax.ejb.TransactionManagement;
-import javax.ejb.TransactionManagementType;
-import javax.inject.Inject;
-import javax.jms.JMSContext;
-import javax.jms.Queue;
-import javax.jms.QueueConnectionFactory;
-import javax.jms.TextMessage;
-import javax.jms.Topic;
-import javax.jms.TopicConnectionFactory;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
-import javax.transaction.RollbackException;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotNull;
+import jakarta.annotation.Resource;
+import jakarta.ejb.EJB;
+import jakarta.ejb.EJBException;
+import jakarta.ejb.SessionContext;
+import jakarta.ejb.Stateless;
+import jakarta.ejb.TransactionAttribute;
+import jakarta.ejb.TransactionAttributeType;
+import jakarta.ejb.TransactionManagement;
+import jakarta.ejb.TransactionManagementType;
+import jakarta.inject.Inject;
+import jakarta.jms.JMSContext;
+import jakarta.jms.Queue;
+import jakarta.jms.QueueConnectionFactory;
+import jakarta.jms.TextMessage;
+import jakarta.jms.Topic;
+import jakarta.jms.TopicConnectionFactory;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.TypedQuery;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Root;
+import jakarta.transaction.RollbackException;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
 
 import com.ibm.websphere.samples.daytrader.interfaces.RuntimeMode;
 import com.ibm.websphere.samples.daytrader.interfaces.Trace;
@@ -72,10 +72,12 @@ import com.ibm.websphere.samples.daytrader.util.TradeConfig;
 @TransactionManagement(TransactionManagementType.CONTAINER)
 public class TradeSLSBBean implements TradeServices {
   
-    @Resource(name = "jms/QueueConnectionFactory", authenticationType = javax.annotation.Resource.AuthenticationType.APPLICATION)
+    // For Wildfly - add java:/ to these resource names.
+  
+    @Resource(name = "jms/QueueConnectionFactory", authenticationType = jakarta.annotation.Resource.AuthenticationType.APPLICATION)
     private QueueConnectionFactory queueConnectionFactory;
 
-    @Resource(name = "jms/TopicConnectionFactory", authenticationType = javax.annotation.Resource.AuthenticationType.APPLICATION)
+    @Resource(name = "jms/TopicConnectionFactory", authenticationType = jakarta.annotation.Resource.AuthenticationType.APPLICATION)
     private TopicConnectionFactory topicConnectionFactory;
 
     @Resource(lookup = "jms/TradeStreamerTopic")

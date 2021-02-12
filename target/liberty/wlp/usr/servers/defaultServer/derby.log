@@ -1,0 +1,19 @@
+----------------------------------------------------------------
+Tue Feb 09 11:52:00 EST 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0177-87b4-fa9d-00003c031050 
+on database directory /Users/emmanuel.ramos2@ibm.com/Documents/GitHub/sample.daytrader9/target/liberty/wlp/usr/shared/resources/data/tradedb with class loader com.ibm.ws.classloading.internal.AppClassLoader@5f1a087e 
+Loaded from file:/Users/emmanuel.ramos2@ibm.com/Documents/GitHub/sample.daytrader9/target/liberty/wlp/usr/shared/resources/DerbyLibs/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_181-b13
+user.dir=/Users/emmanuel.ramos2@ibm.com/Documents/GitHub/sample.daytrader9/target/liberty/wlp/usr/servers/defaultServer
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.15.7
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Tue Feb 09 14:54:37 EST 2021:
+Shutting down instance a816c00e-0177-87b4-fa9d-00003c031050 on database directory /Users/emmanuel.ramos2@ibm.com/Documents/GitHub/sample.daytrader9/target/liberty/wlp/usr/shared/resources/data/tradedb with class loader com.ibm.ws.classloading.internal.AppClassLoader@5f1a087e 
+----------------------------------------------------------------
+Tue Feb 09 14:54:37 EST 2021: Shutting down Derby engine
+----------------------------------------------------------------

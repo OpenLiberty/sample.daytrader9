@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<liberty-plugin-config>
+    <installDirectory>/Users/emmanuel.ramos2@ibm.com/Documents/GitHub/sample.daytrader9/target/liberty/wlp</installDirectory>
+    <serverDirectory>/Users/emmanuel.ramos2@ibm.com/Documents/GitHub/sample.daytrader9/target/liberty/wlp/usr/servers/defaultServer</serverDirectory>
+    <userDirectory>/Users/emmanuel.ramos2@ibm.com/Documents/GitHub/sample.daytrader9/target/liberty/wlp/usr</userDirectory>
+    <serverOutputDirectory>/Users/emmanuel.ramos2@ibm.com/Documents/GitHub/sample.daytrader9/target/liberty/wlp/usr/servers/defaultServer</serverOutputDirectory>
+    <serverName>defaultServer</serverName>
+    <configDirectory>/Users/emmanuel.ramos2@ibm.com/Documents/GitHub/sample.daytrader9/src/main/liberty/config</configDirectory>
+    <configFile>/Users/emmanuel.ramos2@ibm.com/Documents/GitHub/sample.daytrader9/src/main/liberty/config/server.xml</configFile>
+    <bootstrapProperties>
+        <default.http.port>9080</default.http.port>
+        <default.https.port>9443</default.https.port>
+    </bootstrapProperties>
+    <appsDirectory>apps</appsDirectory>
+    <looseApplication>true</looseApplication>
+    <stripVersion>false</stripVersion>
+    <installAppPackages>project</installAppPackages>
+    <applicationFilename>io.openliberty.sample.daytrader9.war.xml</applicationFilename>
+    <assemblyArtifact>
+        <type>jar</type>
+    </assemblyArtifact>
+    <assemblyInstallDirectory>/Users/emmanuel.ramos2@ibm.com/Documents/GitHub/sample.daytrader9/target/liberty</assemblyInstallDirectory>
+    <refresh>false</refresh>
+    <install>
+        <runtimeUrl>https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/nightly/2021-02-08_1100/openliberty-all-21.0.0.2-cl210220210208-1100.zip</runtimeUrl>
+        <password>*********</password>
+        <maxDownloadTime>0</maxDownloadTime>
+        <runtimeUrl>https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/nightly/2021-02-08_1100/openliberty-all-21.0.0.2-cl210220210208-1100.zip</runtimeUrl>
+        <verbose>false</verbose>
+    </install>
+    <installAppsConfigDropins>/Users/emmanuel.ramos2@ibm.com/Documents/GitHub/sample.daytrader9/target/liberty/wlp/usr/servers/defaultServer/configDropins/defaults/install_apps_configuration_1491924271.xml</installAppsConfigDropins>
+    <projectType>war</projectType>
+    <projectCompileDependency>jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:1.2.7</projectCompileDependency>
+</liberty-plugin-config>

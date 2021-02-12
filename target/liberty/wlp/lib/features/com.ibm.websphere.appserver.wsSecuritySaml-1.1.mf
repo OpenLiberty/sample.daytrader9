@@ -1,0 +1,24 @@
+Created-By: 11.0.7 (Eclipse OpenJ9)
+IBM-AppliesTo: io.openliberty;productEdition=Open;productVersion="21.0.0.2"
+IBM-Feature-Version: 2
+IBM-InstallTo: core
+IBM-License-Agreement: wlp/lafiles/LA
+IBM-ProductID: io.openliberty
+IBM-ShortName: wsSecuritySaml-1.1
+Subsystem-Content: com.ibm.websphere.appserver.wsSecurity-1.1; type="osgi.subsystem.feature",
+ com.ibm.websphere.appserver.samlWeb-2.0; type="osgi.subsystem.feature",
+ com.ibm.websphere.appserver.ssoCommon-1.0; type="osgi.subsystem.feature",
+ com.ibm.websphere.appserver.servlet-3.0; ibm.tolerates:="3.1,4.0"; type="osgi.subsystem.feature",
+ com.ibm.websphere.appserver.jta-1.1; ibm.tolerates:="1.2"; type="osgi.subsystem.feature",
+ com.ibm.ws.wssecurity.saml; version="[1.0.0,1.0.200)"
+Subsystem-Description: %description
+Subsystem-License: https://www.eclipse.org/legal/epl-v10.html
+Subsystem-Localization: OSGI-INF/l10n/com.ibm.websphere.appserver.wsSecuritySaml-1.1
+Subsystem-ManifestVersion: 1
+Subsystem-Name: WSSecurity SAML 1.1
+Subsystem-SymbolicName: com.ibm.websphere.appserver.wsSecuritySaml-1.1; visibility:=public; singleton:=false
+Subsystem-Type: osgi.subsystem.feature
+Subsystem-Vendor: IBM Corp.
+Subsystem-Version: 1.0.0
+Tool: Bnd-4.3.0.201909301554
+WLP-DisableAllFeatures-OnConflict: false

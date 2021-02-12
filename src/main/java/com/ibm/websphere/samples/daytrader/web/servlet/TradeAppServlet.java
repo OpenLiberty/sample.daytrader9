@@ -17,16 +17,16 @@ package com.ibm.websphere.samples.daytrader.web.servlet;
 
 import java.io.IOException;
 
-import javax.inject.Inject;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.servlet.http.PushBuilder;
+import jakarta.inject.Inject;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import jakarta.servlet.http.PushBuilder;
 
 import com.ibm.websphere.samples.daytrader.interfaces.Trace;
 import com.ibm.websphere.samples.daytrader.util.Log;
@@ -89,7 +89,7 @@ public class TradeAppServlet extends HttpServlet {
    *            Object that encapsulates the response from the servlet
    */
   @Override
-  public void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws ServletException, IOException {
+  public void doGet(jakarta.servlet.http.HttpServletRequest request, jakarta.servlet.http.HttpServletResponse response) throws ServletException, IOException {
     performTask(request, response);
   }
 
@@ -102,7 +102,7 @@ public class TradeAppServlet extends HttpServlet {
    *            Object that encapsulates the response from the servlet
    */
   @Override
-  public void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws ServletException, IOException {
+  public void doPost(jakarta.servlet.http.HttpServletRequest request, jakarta.servlet.http.HttpServletResponse response) throws ServletException, IOException {
     performTask(request, response);
   }
 

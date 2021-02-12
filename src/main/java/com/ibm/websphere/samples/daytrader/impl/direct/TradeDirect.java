@@ -27,22 +27,22 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.concurrent.Future;
 
-import javax.annotation.Resource;
-import javax.enterprise.concurrent.ManagedExecutorService;
-import javax.enterprise.context.Dependent;
-import javax.enterprise.event.Event;
-import javax.enterprise.event.NotificationOptions;
-import javax.inject.Inject;
-import javax.jms.JMSContext;
-import javax.jms.JMSException;
-import javax.jms.Queue;
-import javax.jms.QueueConnectionFactory;
-import javax.jms.TextMessage;
-import javax.jms.Topic;
-import javax.jms.TopicConnectionFactory;
+import jakarta.annotation.Resource;
+import jakarta.enterprise.concurrent.ManagedExecutorService;
+import jakarta.enterprise.context.Dependent;
+import jakarta.enterprise.event.Event;
+import jakarta.enterprise.event.NotificationOptions;
+import jakarta.inject.Inject;
+import jakarta.jms.JMSContext;
+import jakarta.jms.JMSException;
+import jakarta.jms.Queue;
+import jakarta.jms.QueueConnectionFactory;
+import jakarta.jms.TextMessage;
+import jakarta.jms.Topic;
+import jakarta.jms.TopicConnectionFactory;
 import javax.sql.DataSource;
-import javax.transaction.UserTransaction;
-import javax.validation.constraints.NotNull;
+import jakarta.transaction.UserTransaction;
+import jakarta.validation.constraints.NotNull;
 
 import com.ibm.websphere.samples.daytrader.interfaces.TradeServices;
 import com.ibm.websphere.samples.daytrader.beans.MarketSummaryDataBean;
@@ -63,7 +63,7 @@ import com.ibm.websphere.samples.daytrader.interfaces.TradeJDBC;
 
 /**
  * TradeDirect uses direct JDBC and JMS access to a
- * <code>javax.sql.DataSource</code> to implement the business methods of the
+ * <code>jakarta.sql.DataSource</code> to implement the business methods of the
  * Trade online broker application. These business methods represent the
  * features and operations that can be performed by customers of the brokerage
  * such as login, logout, get a stock quote, buy or sell a stock, etc. and are
@@ -97,10 +97,12 @@ public class TradeDirect implements TradeServices, Serializable {
   private boolean inGlobalTxn = false;
   private boolean inSession = false;
 
-  @Resource(name = "jms/QueueConnectionFactory", authenticationType = javax.annotation.Resource.AuthenticationType.APPLICATION)
+  // For Wildfly - add java:/ to these resource names.
+  
+  @Resource(name = "jms/QueueConnectionFactory", authenticationType = jakarta.annotation.Resource.AuthenticationType.APPLICATION)
   private QueueConnectionFactory queueConnectionFactory;
 
-  @Resource(name = "jms/TopicConnectionFactory", authenticationType = javax.annotation.Resource.AuthenticationType.APPLICATION)
+  @Resource(name = "jms/TopicConnectionFactory", authenticationType = jakarta.annotation.Resource.AuthenticationType.APPLICATION)
   private TopicConnectionFactory topicConnectionFactory;
 
   @Resource(lookup = "jms/TradeStreamerTopic")
@@ -1415,7 +1417,7 @@ public class TradeDirect implements TradeServices, Serializable {
       ResultSet rs = stmt.executeQuery();
       if (!rs.next()) {
         Log.error("TradeDirect:login -- failure to find account for" + userID);
-        throw new javax.ejb.FinderException("Cannot find account for" + userID);
+        throw new jakarta.ejb.FinderException("Cannot find account for" + userID);
       }
 
       String pw = rs.getString("passwd");

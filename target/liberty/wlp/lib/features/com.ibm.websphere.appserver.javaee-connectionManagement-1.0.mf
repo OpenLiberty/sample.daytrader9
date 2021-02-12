@@ -1,0 +1,21 @@
+Created-By: 11.0.7 (Eclipse OpenJ9)
+IBM-AppliesTo: io.openliberty;productVersion="21.0.0.2"
+IBM-Feature-Version: 2
+IBM-Install-Policy: when-satisfied
+IBM-InstallTo: core
+IBM-License-Agreement: wlp/lafiles/LA
+IBM-ProductID: io.openliberty
+IBM-Provision-Capability: osgi.identity; filter:="(&(type=osgi.subsystem.feature)(|(osgi.identity=com.ibm.websphere.appserver.transaction-1.2)(osgi.identity=com.ibm.websphere.appserver.transaction-1.1)))",
+ osgi.identity; filter:="(&(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.connectionManagement-1.0))"
+Subsystem-Content: com.ibm.websphere.appserver.javax.connector.internal-1.6; ibm.tolerates:="1.7"; type="osgi.subsystem.feature",
+ com.ibm.ws.jca.cm; version="[1.1.0,1.1.200)"
+Subsystem-Description: %description
+Subsystem-License: https://www.eclipse.org/legal/epl-v10.html
+Subsystem-Localization: OSGI-INF/l10n/com.ibm.websphere.appserver.javaee-connectionManagement-1.0
+Subsystem-ManifestVersion: 1
+Subsystem-SymbolicName: com.ibm.websphere.appserver.javaee-connectionManagement-1.0; visibility:=private; singleton:=false
+Subsystem-Type: osgi.subsystem.feature
+Subsystem-Vendor: IBM Corp.
+Subsystem-Version: 1.0.0
+Tool: Bnd-4.3.0.201909301554
+WLP-Activation-Type: parallel

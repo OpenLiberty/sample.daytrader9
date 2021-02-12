@@ -1,5 +1,5 @@
 /**
- * (C) Copyright IBM Corporation 2015.
+ * (C) Copyright IBM Corporation 2019.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,9 +28,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import javax.annotation.Resource;
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
+import jakarta.annotation.Resource;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 import javax.sql.DataSource;
 
 import com.ibm.websphere.samples.daytrader.beans.RunStatsDataBean;
@@ -52,6 +52,8 @@ import com.ibm.websphere.samples.daytrader.util.TradeConfig;
 @ApplicationScoped
 public class TradeDirectDBUtils implements TradeDB {
 
+  // For Wildfly - add java:/ to this resource.
+  
   @Resource(lookup = "jdbc/TradeDataSource")
   private DataSource datasource;
 

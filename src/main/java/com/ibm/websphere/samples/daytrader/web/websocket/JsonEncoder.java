@@ -15,11 +15,11 @@
  */
 package com.ibm.websphere.samples.daytrader.web.websocket;
 
-import javax.json.Json;
-import javax.json.JsonObject;
-import javax.websocket.EncodeException;
-import javax.websocket.Encoder;
-import javax.websocket.EndpointConfig;
+import jakarta.json.Json;
+import jakarta.json.JsonObject;
+import jakarta.websocket.EncodeException;
+import jakarta.websocket.Encoder;
+import jakarta.websocket.EndpointConfig;
 
 public class JsonEncoder implements Encoder.Text<JsonMessage>{
 

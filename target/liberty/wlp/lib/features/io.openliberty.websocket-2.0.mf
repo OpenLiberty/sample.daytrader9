@@ -1,0 +1,31 @@
+Created-By: 11.0.7 (Eclipse OpenJ9)
+IBM-API-Package: jakarta.websocket; version="2.0"; type=spec,
+ jakarta.websocket.server; version="2.0"; type=spec,
+ com.ibm.websphere.wsoc; type=ibm-api
+IBM-App-ForceRestart: install,
+ uninstall
+IBM-AppliesTo: io.openliberty;productVersion="2021.2.0.0"
+IBM-Feature-Version: 2
+IBM-InstallTo: core
+IBM-License-Agreement: wlp/lafiles/LA
+IBM-ProductID: io.openliberty
+IBM-ShortName: websocket-2.0
+Subsystem-Content: com.ibm.websphere.appserver.api.wsoc_1.0-javadoc.zip; type=file; location:="dev/api/ibm/javadoc/com.ibm.websphere.appserver.api.wsoc_1.0-javadoc.zip",
+ com.ibm.websphere.appserver.servlet-5.0; type="osgi.subsystem.feature",
+ com.ibm.websphere.appserver.eeCompatible-9.0; type="osgi.subsystem.feature",
+ com.ibm.websphere.appserver.api.wsoc.jakarta; location:="dev/api/ibm/,lib/"; type=jar; version="[1.0.0,1.0.200)",
+ com.ibm.ws.wsoc.jakarta; version="[1.0.0,1.0.200)",
+ io.openliberty.jakarta.websocket.2.0; location:="dev/api/spec/,lib/"; mavenCoordinates="jakarta.websocket:jakarta.websocket-api:2.0.0"; version="[1.0.0,1.0.200)",
+ com.ibm.ws.wsoc.1.1.jakarta; version="[1.0.0,1.0.200)"
+Subsystem-Description: %description
+Subsystem-License: https://www.eclipse.org/legal/epl-v10.html
+Subsystem-Localization: OSGI-INF/l10n/io.openliberty.websocket-2.0
+Subsystem-ManifestVersion: 1
+Subsystem-Name: Jakarta WebSocket 2.0
+Subsystem-SymbolicName: io.openliberty.websocket-2.0; visibility:=public; singleton:=true
+Subsystem-Type: osgi.subsystem.feature
+Subsystem-Vendor: IBM Corp.
+Subsystem-Version: 1.0.0
+Tool: Bnd-4.3.0.201909301554
+WLP-Activation-Type: parallel
+WLP-DisableAllFeatures-OnConflict: true

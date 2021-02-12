@@ -1,15 +1,30 @@
+/**
+ * (C) Copyright IBM Corporation 2019.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.ibm.websphere.samples.daytrader.web.prims.beanval;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import com.ibm.websphere.samples.daytrader.util.Log;
 
@@ -26,9 +41,9 @@ public class PingServletBeanValSimple1  extends HttpServlet {
    * 10:52:39 AM)
    *
    * @param res
-   *            javax.servlet.http.HttpServletRequest
+   *            jakarta.servlet.http.HttpServletRequest
    * @param res2
-   *            javax.servlet.http.HttpServletResponse
+   *            jakarta.servlet.http.HttpServletResponse
    */
   @Override
   public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {

@@ -17,15 +17,15 @@ package com.ibm.websphere.samples.daytrader.web.prims;
 
 import java.io.IOException;
 
-import javax.servlet.AsyncContext;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletException;
-import javax.servlet.ServletInputStream;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.AsyncContext;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletInputStream;
+import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 //import com.ibm.websphere.samples.daytrader.util.Log;
 
@@ -48,9 +48,9 @@ public class PingServlet30Async extends HttpServlet {
      * 10:52:39 AM)
      *
      * @param res
-     *            javax.servlet.http.HttpServletRequest
+     *            jakarta.servlet.http.HttpServletRequest
      * @param res2
-     *            javax.servlet.http.HttpServletResponse
+     *            jakarta.servlet.http.HttpServletResponse
      */
     @Override
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {

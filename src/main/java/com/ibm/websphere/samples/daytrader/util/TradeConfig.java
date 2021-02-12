@@ -316,7 +316,7 @@ public class TradeConfig {
   }
 
   public static String rndEmail(String userID) {
-    return userID + "@" + rndInt(100) + ".com";
+    return userID.replace(":", "") + "@" + rndInt(100) + ".com";
   }
 
   public static String rndFullName() {

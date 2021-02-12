@@ -1,0 +1,42 @@
+Created-By: 11.0.7 (Eclipse OpenJ9)
+IBM-API-Package: org.apache.ws.security; type=third-party,
+ org.apache.ws.security.action; type=third-party,
+ org.apache.ws.security.cache; type=third-party,
+ org.apache.ws.security.components.crypto; type=third-party,
+ org.apache.ws.security.conversation; type=third-party,
+ org.apache.ws.security.conversation.dkalgo; type=third-party,
+ org.apache.ws.security.handler; type=third-party,
+ org.apache.ws.security.message; type=third-party,
+ org.apache.ws.security.message.token; type=third-party,
+ org.apache.ws.security.processor; type=third-party,
+ org.apache.ws.security.saml; type=third-party,
+ org.apache.ws.security.saml.ext; type=third-party,
+ org.apache.ws.security.saml.ext.bean; type=third-party,
+ org.apache.ws.security.saml.ext.builder; type=third-party,
+ org.apache.ws.security.spnego; type=third-party,
+ org.apache.ws.security.str; type=third-party,
+ org.apache.ws.security.transform; type=third-party,
+ org.apache.ws.security.util; type=third-party,
+ org.apache.ws.security.validate; type=third-party,
+ com.ibm.ws.wssecurity.callback; version="1.0"; type=internal
+IBM-AppliesTo: io.openliberty;productEdition=Open;productVersion="21.0.0.2"
+IBM-Feature-Version: 2
+IBM-InstallTo: core
+IBM-License-Agreement: wlp/lafiles/LA
+IBM-ProductID: io.openliberty
+IBM-ShortName: wsSecurity-1.1
+Subsystem-Content: com.ibm.websphere.appserver.jta-1.1; ibm.tolerates:="1.2"; apiJar=false; type="osgi.subsystem.feature",
+ com.ibm.websphere.appserver.appSecurity-2.0; ibm.tolerates:="3.0"; type="osgi.subsystem.feature",
+ com.ibm.websphere.appserver.jaxws-2.2; ibm.tolerates:="2.3"; type="osgi.subsystem.feature",
+ com.ibm.websphere.appserver.ssoCommon-1.0; type="osgi.subsystem.feature"
+Subsystem-Description: %description
+Subsystem-License: https://www.eclipse.org/legal/epl-v10.html
+Subsystem-Localization: OSGI-INF/l10n/com.ibm.websphere.appserver.wsSecurity-1.1
+Subsystem-ManifestVersion: 1
+Subsystem-Name: Web Service Security 1.1
+Subsystem-SymbolicName: com.ibm.websphere.appserver.wsSecurity-1.1; visibility:=public; singleton:=false
+Subsystem-Type: osgi.subsystem.feature
+Subsystem-Vendor: IBM Corp.
+Subsystem-Version: 1.0.0
+Tool: Bnd-4.3.0.201909301554
+WLP-DisableAllFeatures-OnConflict: false

@@ -1,13 +1,18 @@
-/*******************************************************************************
- * Copyright (c) 2017 IBM Corporation and others.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
+/**
+ * (C) Copyright IBM Corporation 2019.
  *
- * Contributors:
- *     IBM Corporation - initial API and implementation
- *******************************************************************************/
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.ibm.websphere.samples.daytrader.web.prims.beanval;
 
 import java.util.Set;
@@ -16,14 +21,14 @@ import java.util.logging.Logger;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
-import javax.validation.ConstraintViolation;
-import javax.validation.Validator;
-import javax.validation.ValidatorFactory;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.Validator;
+import jakarta.validation.ValidatorFactory;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 
 public class SimpleBean1 {
   /**
@@ -47,17 +52,17 @@ public class SimpleBean1 {
   @Pattern(regexp = "[a-z][a-z]*", message = "go to your room!")
   String pattern = "mypattern";
 
-  
+
 
   boolean setToFail = false;
 
-  
+
 
   public SimpleBean1() throws Exception {
     if (validatorFactory == null) {
       Context nContext = new InitialContext();
       validatorFactory = (ValidatorFactory) nContext.lookup("java:comp/ValidatorFactory");
-      
+
     }
     validator = validatorFactory.getValidator();
   }
@@ -70,7 +75,7 @@ public class SimpleBean1 {
   public void checkInjectionValidation() {
 
     traceLogger.entering(thisClass, "checkInjectionValidation", this);
-   
+
     Set<ConstraintViolation<SimpleBean1>> cvSet = validator.validate(this);
 
     if (!cvSet.isEmpty()) {

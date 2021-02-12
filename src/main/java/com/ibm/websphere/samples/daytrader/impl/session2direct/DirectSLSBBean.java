@@ -19,13 +19,13 @@ import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.concurrent.Future;
 
-import javax.ejb.Stateless;
-import javax.ejb.TransactionAttribute;
-import javax.ejb.TransactionAttributeType;
-import javax.ejb.TransactionManagement;
-import javax.ejb.TransactionManagementType;
-import javax.inject.Inject;
-import javax.validation.constraints.NotNull;
+import jakarta.ejb.Stateless;
+import jakarta.ejb.TransactionAttribute;
+import jakarta.ejb.TransactionAttributeType;
+import jakarta.ejb.TransactionManagement;
+import jakarta.ejb.TransactionManagementType;
+import jakarta.inject.Inject;
+import jakarta.validation.constraints.NotNull;
 
 import com.ibm.websphere.samples.daytrader.interfaces.RuntimeMode;
 import com.ibm.websphere.samples.daytrader.interfaces.Trace;

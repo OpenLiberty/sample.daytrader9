@@ -1,0 +1,32 @@
+Created-By: 11.0.7 (Eclipse OpenJ9)
+IBM-App-ForceRestart: install,
+ uninstall
+IBM-AppliesTo: io.openliberty;productEdition=Open;productVersion="21.0.0.2"
+IBM-Feature-Version: 2
+IBM-Install-Policy: when-satisfied
+IBM-InstallTo: core
+IBM-License-Agreement: wlp/lafiles/LA
+IBM-ProductID: io.openliberty
+IBM-Provision-Capability: osgi.identity; filter:="(&(type=osgi.subsystem.feature)(|(osgi.identity=com.ibm.websphere.appserver.jaxws-2.2)))",
+ osgi.identity; filter:="(&(type=osgi.subsystem.feature)(osgi.identity=com.ibm.websphere.appserver.wsSecurity-1.1))"
+Subsystem-Content: com.ibm.websphere.appserver.internal.slf4j-1.7.7; type="osgi.subsystem.feature",
+ com.ibm.websphere.appserver.wss4j-1.0; type="osgi.subsystem.feature",
+ com.ibm.ws.org.opensaml.xmltooling.1.4.4; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.joda.time.1.6.2; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.opensaml.opensaml.2.6.1; version="[1.0.0,1.0.200)",
+ com.ibm.ws.prereq.wsdl4j.1.6.2; version="[1.0.0,1.0.200)",
+ com.ibm.ws.net.sf.ehcache.core.2.5.2; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.apache.cxf.ws.mex.2.6.2; version="[1.0.0,1.0.200)",
+ com.ibm.ws.wssecurity; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.apache.cxf.ws.security.2.6.2; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.opensaml.openws.1.5.6; version="[1.0.0,1.0.200)",
+ com.ibm.ws.org.apache.commons.logging.1.0.3; version="[1.0.0,1.0.200)"
+Subsystem-Description: %description
+Subsystem-License: https://www.eclipse.org/legal/epl-v10.html
+Subsystem-Localization: OSGI-INF/l10n/com.ibm.websphere.appserver.wsSecurity1.1-jaxws2.2
+Subsystem-ManifestVersion: 1
+Subsystem-SymbolicName: com.ibm.websphere.appserver.wsSecurity1.1-jaxws2.2; visibility:=private; singleton:=false
+Subsystem-Type: osgi.subsystem.feature
+Subsystem-Vendor: IBM Corp.
+Subsystem-Version: 1.0.0
+Tool: Bnd-4.3.0.201909301554

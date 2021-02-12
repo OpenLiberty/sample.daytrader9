@@ -1,25 +1,11 @@
-FROM websphere-liberty
+FROM openliberty/open-liberty:kernel-java11-openj9-ubi
 
-COPY server.xml /config/server.xml
+COPY --chown=1001:0 src/main/liberty/config/server.xml /config/server.xml
+COPY --chown=1001:0 src/main/liberty/config/server.xml /config/server.env
+COPY --chown=1001:0 target/io.openliberty.sample.daytrader8.war /config/apps/
 
-#Handle exit code 22 - the feature already exists.
-RUN installUtility install --acceptLicense defaultServer; if [ $? -eq 0 -o $? -eq 22 ]; then exit 0; else exit $?; fi
+#Derby
+COPY --chown=1001:0 target/liberty/wlp/usr/shared/resources/DerbyLibs/derby-10.14.2.0.jar /opt/ol/wlp/usr/shared/resources/DerbyLibs/derby-10.14.2.0.jar
+COPY --chown=1001:0 target/liberty/wlp/usr/shared/resources/data /opt/ol/wlp/usr/shared/resources/data
 
-COPY jvm.options /config/jvm.options
-
-COPY resources/data /opt/ibm/wlp/usr/shared/resources/data
-COPY resources/DerbyLibs /opt/ibm/wlp/usr/shared/resources/DerbyLibs
-
-USER root
-RUN cd /opt/ibm/wlp/usr/shared/resources && chown -R default data
-USER 1001
-
-COPY target/daytrader8-1.0-SNAPSHOT.war /config/apps
-
-#DERBY
-#RUN mkdir -p /opt/ibm/wlp/usr/shared/resources/DerbyLibs && wget -t 10 -x -nd -P /opt/ibm/wlp/usr/shared/resources/DerbyLibs http://www-eu.apache.org/dist//db/derby/db-derby-10.14.1.0/db-derby-10.14.1.0-lib.zip && cd /opt/ibm/wlp/usr/shared/resources/DerbyLibs && unzip db-derby-10.14.1.0-lib.zip && rm db-derby-10.14.1.0-lib.zip 
-
-#RUN apt-get update && apt-get install -y curl
-#RUN /opt/ibm/wlp/bin/server start defaultServer && sleep 3 &&  curl http://localhost:9080/daytrader/config?action=buildDBTables && sleep 3 && curl localhost:9080/daytrader/config?action=buildDB && sleep 5 && /opt/ibm/wlp/bin/server stop defaultServer
-
-
+RUN configure.sh
