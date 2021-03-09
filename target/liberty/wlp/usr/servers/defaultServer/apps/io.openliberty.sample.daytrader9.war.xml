@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<archive>
-    <dir sourceOnDisk="/Users/emmanuel.ramos2@ibm.com/Documents/GitHub/sample.daytrader9/src/main/webapp" targetInArchive="/"/>
-    <dir sourceOnDisk="/Users/emmanuel.ramos2@ibm.com/Documents/GitHub/sample.daytrader9/target/classes" targetInArchive="/WEB-INF/classes"/>
-    <file sourceOnDisk="/Users/emmanuel.ramos2@ibm.com/.m2/repository/jakarta/servlet/jsp/jstl/jakarta.servlet.jsp.jstl-api/1.2.7/jakarta.servlet.jsp.jstl-api-1.2.7.jar" targetInArchive="/WEB-INF/lib/jakarta.servlet.jsp.jstl-api-1.2.7.jar"/>
-    <file sourceOnDisk="/Users/emmanuel.ramos2@ibm.com/Documents/GitHub/sample.daytrader9/target/tmp/META-INF/MANIFEST.MF" targetInArchive="/META-INF/MANIFEST.MF"/>
-</archive>
