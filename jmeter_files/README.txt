@@ -1,4 +1,4 @@
-# (C) Copyright IBM Corporation 2019.
+# (C) Copyright IBM Corporation 2019, 2021.
  #
  # Licensed under the Apache License, Version 2.0 (the "License");
  # you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
  # limitations under the License.
  
 
-daytrader8.jmx is an Apache JMeter script that may be used for running the DayTrader8 benchmark.
+daytrader9.jmx is an Apache JMeter script that may be used for running the DayTrader9 benchmark.
 
 Jmeter version 3.3 or later is highly recommended.
 To use the script, you will need to put the the WebSocket Sampler (and dependencies) from WebSocket Samplers by Peter Doornbosch into lib/ext. 
@@ -24,7 +24,6 @@ The script has the following options:
 	-JHOST	    The name of the machine running the DayTrader Application. The default is localhost.
 	-JPORT	    The HTTP port of the server running the DayTrader Application. The default is 9080.
 	-JPROTOCOL  The transport either http or https
-				NOTE: The websocket plugin does not offer a variable substitution. See the WS note below.
 	-JTHREADS   The number of jmeter threads to start. The default is 50.
 	-JRAMP		The ramp up time for starting the threads. Set this to the same value as -JTHREADS for a smoother startup. The default is 0.
 	-JDURATION  The time (in seconds) to run jmeter.
@@ -33,9 +32,7 @@ The script has the following options:
 	-JBOTUID    The lowest user id. The default is 0.
 	-JTOPUID    The highest user id. The default is 14999, which assumes there are 15,000 users in the database.
 	
-WS NOTE: To enable encrypted WebSocket, either open daytrader8.jmx using the GUI and enable WSS on the WS2 and WS1 calls, or edit the daytrader.jmx file and change the TLS prop to true.
-
-Example: ./jmeter -n -t daytrader8.jmx -JHOST=myserver -JPORT=9080 -JPROTOCOL=http -JMAXTHINKTIME=100 -JDURATION=300
+Example: ./jmeter -n -t daytrader9.jmx -JHOST=myserver -JPORT=9080 -JPROTOCOL=http -JMAXTHINKTIME=100 -JDURATION=300
 
 To see output every five seconds from JMeter, edit the following section in <JMETER_HOME>/bin/jmeter.properties
 
