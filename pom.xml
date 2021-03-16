@@ -52,14 +52,14 @@
             <artifactId>liberty-maven-plugin</artifactId>
             <version>3.3-M4</version>
             <configuration>
-                    <bootstrapProperties>
+              <bootstrapProperties>
                 <default.http.port>${testServerHttpPort}</default.http.port>
                 <default.https.port>${testServerHttpsPort}</default.https.port>
               </bootstrapProperties>
               <install>
-                      <runtimeUrl>https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/nightly/2021-02-08_1100/openliberty-all-21.0.0.2-cl210220210208-1100.zip</runtimeUrl>
-                    </install>
-                </configuration>
+                <runtimeUrl>https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/beta/2021-02-09_1100/openliberty-jakartaee9-21.0.0.3-beta.zip</runtimeUrl>
+              </install>
+            </configuration>
          </plugin>
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
